@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sass/dest/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+
+.l-header { position: fixed; width: 100%; top: 0; background-color: rgba(255, 0, 0, .2); z-index: 99; } .p-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; &__logo { order: 1; width: 100px; height: auto; }
+&::after { content: ""; width: 100%; order: 4; @include minScreen($breakpoint_mobile) { order: 2; } } &.is_shrink { .p-corpNavi { order: 4; } .p-globalNavi { order: 2; } .p-searchBox { order: 3; } &::after { @include minScreen($breakpoint_mobile) { order:
+4; } } } } .p-corpNavi { order: 3; @include minScreen($breakpoint_mobile) { order: 2; } &::before { content: "③"; display: inline-block; } } .p-globalNavi { order: 5; @include minScreen($breakpoint_mobile) { order: 3; } &::before { content: "④"; display:
+inline-block; } } .p-searchBox { order: 2; @include minScreen($breakpoint_mobile) { order: 4; } &::before { content: "⑤"; display: inline-block; } } .p-humbergur { order: 4; @include minScreen($breakpoint_mobile) { display: none; } &::before { content:
+"⑥"; display: inline-block; } }
+
+
+
+<body>
+    <header class="l-header p-header">
+        <div class="p-header__logo">
+            <a class="p-header__logoLink" href="#">
+                <img class="p-header__logoImg" src="./image/logo.svg">
+            </a>
+        </div>
+        <nav class="p-corpNavi"><i class="material-icons">slideshow</i>
+            <!-- <ul>
+                    <li>corpNav</li>
+                </ul> -->
+        </nav>
+        <nav class="p-globalNavi"><i class="material-icons">directions_walk</i>GlobalNavi
+            <!-- <ul class="p-globalNavi__list">
+                    <li class="p-globalNavi__item">
+                        <a class="p-globalNavi__link" href="#">ニュース</a>
+                    </li>
+                </ul> -->
+        </nav>
+        <div class="p-searchBox"><i class="material-icons">flight</i>SearchBox</div>
+        <div class="p-humbergur"><i class="material-icons">face</i>
+        </div>
+    </header>
+
+    <main style="margin-top: 150px;">
+        <i class="material-icons md-48">face</i>
+        <div class="l-main">
+            <div class="p-spacingImage__wrap">
+                <div class="p-spacingImage__imageRight">
+                    <img src="./image/bird.PNG" alt="">
+                </div>
+                <div class="p-spacingImage__contentsLeft">
+                    <h2>TITITLTITLETITTLE</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto impedit veniam odit corrupti sit, inventore dolore quis aut sunt quia aperiam ex. Voluptatibus quia voluptatem officiis, impedit facere consequatur enim.</p>
+                    <h2>タイトルたいとるＴＩＴＬＥ</h2>
+                    <p>色は匂へど散りぬるを我が世誰ぞ常ならむ有為の奥山今日越えて浅き夢見じ酔ひもせず</p>
+                </div>
+            </div>
+    </main>
+    <footer></footer>
+    </div>
+    <script>
+        const HEADER = document.getElementsByTagName("header");
+        window.addEventListener("scroll", Shrink);
+        window.addEventListener("load", Shrink);
+        console.dir(HEADER);
+
+        function Shrink() {
+            if (document.documentElement.scrollTop > 80 && window.innerWidth > 750) {
+                HEADER[0].classList.add("is_shrink");
+            } else {
+                HEADER[0].classList.remove("is_shrink");
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "191028",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.2",
+    "gulp": "^4.0.2",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-typescript": "^5.0.1",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie 9"
+  ]
+}

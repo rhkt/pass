@@ -1,0 +1,31 @@
+.c-button {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    // padding: 5px 35px;
+    // font-size: 14px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    // background-color: red;
+    // color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    // font-size: 1.125rem;
+    text-align: center;
+    text-decoration: none;
+    transition: .25s;
+    // margin: 0 5px 5px 0;
+    &:focus,
+    &:hover {
+        // background-color: #fff;
+        border-color: currentColor;
+        // color: red;
+    }
+}
+
+// .btn {
+//     width: 300px;
+//     padding: 20px 10px;
+//     background-color: #e25c00;
+//     border: 2px solid transparent;
+// }

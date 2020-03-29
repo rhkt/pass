@@ -1,0 +1,28 @@
+.l-layout01 {
+    display: flex;
+    background-color: rgba(255, 255, 0, .2);
+    flex-wrap: wrap;
+    &__sideBar {
+        font-size: 1.4rem;
+        min-height: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: rgba(255, 0, 0, .2);
+        width: 100%;
+        @include minScreen($breakpoint_mobile) {
+            width: calc(((100% - 40px * 12) / 12) * 4 + 40px * 3);
+            // width: calcGrid(2);
+        }
+    }
+    &__main {
+        min-height: 100%;
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: rgba(0, 255, 0, .2);
+        @include minScreen($breakpoint_mobile) {
+            width: calc(((100% - 40px * 12) / 12) * 8 + 40px * 7);
+            // width: calcGrid(7);
+        }
+    }
+}

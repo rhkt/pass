@@ -1,0 +1,21 @@
+<%
+if (typeof var1 === 'undefined') { var var1 = ''; }
+if (typeof data === 'undefined') { var data = {head:'default', body:'default'}; }
+%>
+
+    <section class="<%= var1 %>">
+        <h2>
+            <%= data.head %>
+        </h2>
+        <p>
+            <%= data.body %>
+        </p>
+        <%
+  for(var i = 0; i < 10; i++){
+  %>
+            <p>
+                <%= i %>回目めめめabcdaaa</p>
+            <%
+  };
+  %>
+    </section>

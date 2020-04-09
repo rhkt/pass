@@ -1,0 +1,33 @@
+.p-tableProduct {
+    padding: 0 0 0 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    @include minScreen($breakpoint_mobile) {
+        padding: 0 25px;
+    }
+    &__inner {
+        margin: 0 auto;
+        width: 1230px;
+        max-width: none;
+        @include minScreen($breakpoint_mobile) {
+            max-width: 100%;
+        }
+    }
+    &__partWidth {
+        width: 20%;
+    }
+    &__applicationsWidth {
+        width: 15%;
+    }
+    &__appearanceWidth {
+        width: 15%;
+    }
+    &__qtyWidth {
+        width: 10%;
+    }
+    &__remarksWidth {
+        width: 40%;
+    }
+}

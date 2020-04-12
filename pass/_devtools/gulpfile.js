@@ -60,7 +60,6 @@ gulp.task('sass-compile', function(done) {
 
 
 gulp.task('ejs-compile', function(done) {
-
     gulp.src(["../ejs/**/*.ejs", '!' + "../ejs/**/_*.ejs"])
         .pipe(ejs({ title: 'gulp-ejs' }))
         .pipe(rename({ extname: '.html' }))
@@ -78,7 +77,10 @@ gulp.task('iconfont', function(done) {
             fontPath: './fonts/icons/'
         }))
         .pipe(iconfont({
-            fontName: 'icons'
+            fontName: 'icons',
+            // normalize: true,
+            // normalize: true,
+            fontHeight: 500
         }))
         .pipe(gulp.dest('../sass/dest/fonts/icons/'));
     done();

@@ -4,6 +4,20 @@
       src: url('<%= fontPath %><%= fontName %>.eot?<%= cacheBuster %>#iefix') format('eot'), url('<%= fontPath %><%= fontName %>.woff2<%= cacheBusterQueryString %>') format('woff2'), url('<%= fontPath %><%= fontName %>.woff<%= cacheBusterQueryString %>') format('woff'), url('<%= fontPath %><%= fontName %>.ttf<%= cacheBusterQueryString %>') format('truetype'), url('<%= fontPath %><%= fontName %>.svg<%= cacheBusterQueryString %>#<%= fontName %>') format('svg');
   }
   
+  [class*=" icon-"],
+  [class^=icon-] {
+      font-family: "<%= fontName %>";
+      speak: none;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      // font-size: 1.2rem;
+  }
+  
   @mixin <%=cssClass%>-styles {
       font-family: "<%= fontName %>";
       -webkit-font-smoothing: antialiased;
@@ -36,13 +50,13 @@
   @mixin <%=cssClass%>($filename,
   $insert: before,
   $extend: true) {
-      &:#{$insert} {
-          @if $extend {
-              @extend %<%=cssClass%>;
-          }
-          @else {
-              @include <%=cssClass%>-styles;
-          }
+      &::#{$insert} {
+          // @if $extend {
+          //     @extend %<%=cssClass%>;
+          // }
+          // @else {
+          //     @include <%=cssClass%>-styles;
+          // }
           content: <%=cssClass%>-char($filename);
       }
   }

@@ -1,1 +1,0 @@
-const side = document.querySelector('l-build__sideBar');

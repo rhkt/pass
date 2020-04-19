@@ -1,0 +1,59 @@
+<%- include('inc/_header', ); %>
+    <%- include('inc/_grid', ); %>
+
+        <main class="l-main p-main">
+            <div class="l-build">
+                <div class="l-build__sideBar">
+                    サイドバー
+                </div>
+                <div class="l-build__contents">
+                    <section class="p-slider">
+                        トップイメージ
+                    </section>
+                    <section class="p-heading">
+                        <div class="p-heading__inner--noPadding">
+                            <div class="l-block">
+                                <p class="l-blockItem--noMargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vel, perspiciatis mollitia voluptas voluptatem ab magni deserunt minima animi eius dolores reprehenderit ullam itaque suscipit consequatur qui? Quasi,
+                                    maxime sunt.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-recomended">
+                        <div class="p-recomended__inner--noPadding">
+                            <div class="l-block">
+                                <% for(let i = 0; i < 4; i++){ %>
+                                    <%- include('inc/_p-card',{className:"l-blockItem1to2--noMargin"}); %>
+                                        <% }; %>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-newProducts">
+                        <div class="p-newProducts__inner--noPadding">
+                            <div class="l-block">
+                                <% for(let i = 0; i < 4; i++){ %>
+                                    <%- include('inc/_p-card',{className:"l-blockItem1to3--noMargin"}); %>
+                                        <% }; %>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-newsevents">
+                        <div class="p-newsevents__inner--noPadding">
+                            <div class="l-block">
+                                <% for(let i = 0; i < 4; i++){ %>
+                                    <%- include('inc/_p-card',{className:"l-blockItem1to4--noMargin"}); %>
+                                        <% }; %>
+                            </div>
+                        </div>
+                    </section>
+                    <%- include('inc/_grid', ); %>
+
+                </div>
+            </div>
+        </main>
+        <footer class="l-footer p-footer"></footer>
+        </div>
+        <script src="../js/main.js"></script>
+        </body>
+
+        </html>

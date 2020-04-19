@@ -1,0 +1,39 @@
+.p-paging {
+    &--today {
+        &>li {
+            a {
+                background-color: white;
+                color: black;
+                border: #014254 solid 1px;
+                &:hover {
+                    text-decoration: none;
+                    background-color: #FEC330;
+                    color: white;
+                    border-color: #FEC330;
+                }
+            }
+            &.is_current a {
+                background-color: #FEC330;
+                color: white;
+                border-color: #FEC330;
+            }
+        }
+    }
+    &--brand {
+        &>li {
+            a {
+                background-color: white;
+                color: black;
+                &:hover {
+                    text-decoration: none;
+                    background-color: black;
+                    color: white;
+                }
+            }
+            &.is_current a {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+}

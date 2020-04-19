@@ -1,0 +1,47 @@
+.c-table {
+    font-size: 1.4rem;
+    width: 100%;
+    table-layout: fixed;
+    &__header {
+        padding: 20px;
+        color: #333;
+        background-color: #f5f5f5;
+        border: 1px solid #e6e6e6;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: left;
+        line-height: 1.2;
+        &--textNormal {
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+            border: 1px solid #e6e6e6;
+            vertical-align: middle;
+            text-align: left;
+            line-height: 1.2;
+        }
+    }
+    &__text {
+        padding: 20px;
+        line-height: 1.75;
+        border: 1px solid #e6e6e6;
+        color: #6e6e6e;
+    }
+    &__image {
+        padding: 10px;
+        overflow: hidden;
+        border: 1px solid #e6e6e6;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        &--noBorder {
+            padding: 10px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.p-center {
+    &__inner {
+        position: relative;
+        margin: 0 auto;
+        min-width: 900px;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 390px;
+    }
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

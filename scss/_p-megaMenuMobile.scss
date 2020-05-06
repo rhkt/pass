@@ -1,0 +1,67 @@
+header {
+    position: relative;
+    background-color: azure;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.openCloseButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+// .header-wrap {
+//     max-width: 1000px;
+//     display: flex;
+//     justify-content: space-between;
+//     margin: 0 auto;
+// }
+// .lv02-wrap {
+//     overflow: hidden;
+//     height: 0;
+//     transition: height .3s ease-in-out;
+// }
+// .lv03-wrap {
+//     overflow: hidden;
+//     height: 0;
+//     transition: height .3s ease-in-out;
+// }
+// .lv04-wrap {
+//     overflow: hidden;
+//     height: 0;
+//     transition: height .3s ease-in-out;
+// }
+
+/* PC */
+
+// .lv03-list.is-active>.lv04-wrap {
+// 	display: block;
+// }
+.p-megaMenuMobile {
+    &__cover01,
+    &__cover02,
+    &__cover03,
+    &__cover04 {
+        margin-top: 50px;
+        width: 0;
+        color: gray;
+        // display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #f7f7f7;
+        height: 100%;
+        overflow-y: auto;
+        transition: 0.3s width ease-in-out;
+        li {
+            padding: 5px;
+            border-bottom: 1px solid gray;
+            &:hover {
+                background-color: skyblue;
+            }
+        }
+    }
+    &__cover02 {}
+    &__cover03 {}
+    &__cover04 {}
+}

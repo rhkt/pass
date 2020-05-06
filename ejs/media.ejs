@@ -1,0 +1,57 @@
+<%- include('inc/_header', ); %>
+    <%- include('inc/_grid', ); %>
+
+        <main class="l-main p-main">
+            <div class="l-build p-accordion">
+                <div class="p-accordion__contents">
+                    <div class="p-media">
+                        <div class="p-media__img">
+                            <div class="p-media__contentsWrapper">
+                                <iframe class="p-media__contents" width="560" height="315" src="https://www.youtube.com/embed/HaJUWRziDQc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="p-media__body">
+                            <h3 class="p-media__title">
+                                TITLE TITLE
+                            </h3>
+                            <p class="p-media__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quaerat quos dolor tempora perspiciatis numquam temporibus dicta ab ut voluptatibus iste recusandae asperiores, ex nisi assumenda iusto magni exercitationem? Quod?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-accordion__button">
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga esse eveniet impedit. Corrupti quibusdam eveniet autem! Neque vel fuga a? At nesciunt quia eius laborum vel obcaecati? Quidem, aspernatur porro.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga esse eveniet impedit. Corrupti quibusdam eveniet autem! Neque vel fuga a? At nesciunt quia eius laborum vel obcaecati? Quidem, aspernatur porro.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga esse eveniet impedit. Corrupti quibusdam eveniet autem! Neque vel fuga a? At nesciunt quia eius laborum vel obcaecati? Quidem, aspernatur porro.
+                </p>
+            </div>
+        </main>
+        <footer class="l-footer p-footer"></footer>
+        </div>
+        <script src="../js/main.js"></script>
+        <script>
+            const AccordionOri = document.querySelector('.p-accordion');
+            const Accordion = document.querySelector('.p-accordion__contents');
+            const Button = document.querySelector('.p-accordion__button');
+
+            Button.addEventListener('click', function() {
+                if (AccordionOri.classList.contains("is-open")) {
+                    Accordion.style.maxHeight = "50px";
+                    AccordionOri.classList.remove("is-open");
+                } else {
+                    Accordion.style.maxHeight = Accordion.scrollHeight + 'px';
+                    console.log("CLICKED");
+                    AccordionOri.classList.add("is-open");
+                }
+            });
+        </script>
+        </body>
+
+        </html>

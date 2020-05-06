@@ -1,9 +1,0 @@
-.l-header {
-    background-color: rgba(0, 0, 255, .1);
-    &__inner {
-        max-width: 1280px;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 255, .1);
-        @include minScreen($breakpoint_mobile) {}
-    }
-}
